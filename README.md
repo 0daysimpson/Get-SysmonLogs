@@ -18,11 +18,9 @@ SYNTAX
 
 # Installation
 
-1. Install Sysmon - <link here>
-2. Configure monitoring rules - Quick start configurations below
-   * DNS Monitoring only - <link here> 
-   * Basic Process and network monitoring - <link here>
-3. Install PowerShell module (or import function into `profile.ps1`)
+1. Install Sysmon - https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
+2. Configure monitoring rules
+3. Import function into `profile.ps1`
 
 # Usage 
 
