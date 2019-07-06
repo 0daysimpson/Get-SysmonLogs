@@ -11,7 +11,7 @@ Function Get-SysmonLogs {
         [switch]$Process,
         [switch]$DNS,
         [switch]$all, [switch]$GetOldest)
- 
+
     if ($Process) {
         #Process creation and termination
         $EventID = @(1, 2, 5, 10)
@@ -79,7 +79,8 @@ Function Get-SysmonLogs {
             $EndNumber = ($Flow.Length - 1)
             Foreach ($Item in $flow[-1..$EndNumber]) {
                 $HashPair = $Item.Split(":", 2)
-                $SystemEvent | add-member -MemberType NoteProperty -name $HashPair[0]  -value $HashPair[1] -Force
+                $HashPair.Trim()
+                $SystemEvent | add-member -MemberType NoteProperty -name $HashPair[0].Trim()  -value $HashPair[1].Trim() -Force
             }
             $SystemEvent
         }
